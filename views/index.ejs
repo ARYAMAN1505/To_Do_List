@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="/styles.css"> 
+</head>
+<body>
+    <div class="a">
+        <img src="/logo.jpg" class="logo">
+        <div class="head">
+            <img src="/notes.png" class="notes">
+        </div>
+    </div>
+    <div class="high">
+        <h1>
+            TO-DO-LIST
+        </h1>
+        <h1>
+            <%= date %>
+        </h1>
+    </div>
+    <br/>
+    <div class="one">
+    <div class="j">
+        <form action="/" method="POST">
+            <label for="list"><h2>Enter the tasks you wish to complete today </h2></label>
+            <input type="text" name="list">
+            <input type="submit" name="submit" value="Submit">
+        </form>
+   </div>
+        <div class="bot">
+        <% for (let i = 0; i < 20; i++) { %>
+            <% if (liste[i]) { %>
+                <div class="lst">
+                    <input type="checkbox" class="ll">
+                    <label>
+                       <h3><%= liste[i] %></h3> 
+                    </label>
+                </div>
+            <% } %>
+        <% } %>
+            </div>
+            </div>
+</body>
+</html>
